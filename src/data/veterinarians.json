@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "name": "Dupont",
+    "firstName": "Claire",
+    "email": "c.dupont@patteetcie.fr",
+    "phone": "+33 4 91 11 22 33",
+    "specialization": "Chirurgie, médecine interne"
+  },
+  {
+    "id": 2,
+    "name": "Rossi",
+    "firstName": "Luca",
+    "email": "l.rossi@patteetcie.fr",
+    "phone": "+33 4 91 44 55 66",
+    "specialization": "NAC, imagerie"
+  },
+  {
+    "id": 3,
+    "name": "Martin",
+    "firstName": "Camille",
+    "email": "camille@patteetcie.fr",
+    "phone": "+33 4 91 00 00 00",
+    "specialization": "NAC, chirurgie, généraliste"
+  }
+]
+

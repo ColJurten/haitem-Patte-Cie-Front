@@ -1,0 +1,50 @@
+[
+  {
+    "id": 101,
+    "date": "2024-01-15",
+    "reason": "Consultation annuelle",
+    "comments": "RAS, poids stable.",
+    "animalId": 1,
+    "vetId": 3
+  },
+  {
+    "id": 102,
+    "date": "2024-07-10",
+    "reason": "Rappel vaccin annuel",
+    "comments": "Vaccin bien toléré, contrôle OK.",
+    "animalId": 1,
+    "vetId": 1
+  },
+  {
+    "id": 201,
+    "date": "2023-11-05",
+    "reason": "Boiterie postérieure droite",
+    "comments": "Entorse légère, repos + anti-inflammatoires.",
+    "animalId": 2,
+    "vetId": 1
+  },
+  {
+    "id": 202,
+    "date": "2024-03-18",
+    "reason": "Vaccination CHPPi-L",
+    "comments": "Chien un peu stressé, mais examen clinique normal.",
+    "animalId": 2,
+    "vetId": 3
+  },
+  {
+    "id": 301,
+    "date": "2024-02-02",
+    "reason": "Perte d'appétit",
+    "comments": "Suspicion de trouble digestif, traitement symptomatique.",
+    "animalId": 3,
+    "vetId": 2
+  },
+  {
+    "id": 302,
+    "date": "2024-05-12",
+    "reason": "Contrôle post-traitement",
+    "comments": "État général amélioré, poids stable.",
+    "animalId": 3,
+    "vetId": 2
+  }
+]

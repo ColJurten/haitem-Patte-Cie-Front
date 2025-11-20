@@ -1,0 +1,56 @@
+[
+  {
+    "id": 501,
+    "name": "Vaccin CHPPi-L",
+    "dateStart": "2024-01-15",
+    "dateEnd": "2024-01-22",
+    "reason": "Prévention maladies infectieuses chien",
+    "comments": "Rappel prévu dans 1 an.",
+    "visitId": 101
+  },
+  {
+    "id": 502,
+    "name": "Antiparasitaire externe",
+    "dateStart": "2024-07-10",
+    "dateEnd": "2024-07-10",
+    "reason": "Prévention puces et tiques",
+    "comments": "Spot-on appliqué en consultation, à renouveler tous les mois.",
+    "visitId": 102
+  },
+  {
+    "id": 601,
+    "name": "Anti-inflammatoire",
+    "dateStart": "2023-11-05",
+    "dateEnd": "2023-11-12",
+    "reason": "Entorse légère membre postérieur",
+    "comments": "Administrer avec la nourriture, surveiller vomissements.",
+    "visitId": 201
+  },
+  {
+    "id": 602,
+    "name": "Vaccin CHPPi-L",
+    "dateStart": "2024-03-18",
+    "dateEnd": "2024-03-18",
+    "reason": "Vaccination annuelle",
+    "comments": "Aucun effet secondaire observé.",
+    "visitId": 202
+  },
+  {
+    "id": 701,
+    "name": "Traitement digestif",
+    "dateStart": "2024-02-02",
+    "dateEnd": "2024-02-07",
+    "reason": "Perte d'appétit, suspicion gastro-entérite",
+    "comments": "Petits repas fractionnés + sirop digestif 2x/jour.",
+    "visitId": 301
+  },
+  {
+    "id": 702,
+    "name": "Supplément alimentaire",
+    "dateStart": "2024-05-12",
+    "dateEnd": "2024-06-12",
+    "reason": "Soutien de l'état général",
+    "comments": "À mélanger au foin, contrôle dans 3 mois.",
+    "visitId": 302
+  }
+]

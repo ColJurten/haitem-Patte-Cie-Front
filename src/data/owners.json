@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "name": "Durand",
+    "firstName": "Sophie",
+    "phone": "+33 6 12 34 56 78",
+    "email": "sophie.durand@example.com",
+    "address": "12 rue des Lilas, 13001 Marseille"
+  },
+  {
+    "id": 2,
+    "name": "Martin",
+    "firstName": "Pierre",
+    "phone": "+33 6 22 11 33 44",
+    "email": "pierre.martin@example.com",
+    "address": "5 avenue du Prado, 13008 Marseille"
+  },
+  {
+    "id": 3,
+    "name": "Benali",
+    "firstName": "Leïla",
+    "phone": "+33 7 55 44 33 22",
+    "email": "leila.benali@example.com",
+    "address": "8 rue des Oliviers, 13090 Aix-en-Provence"
+  }
+]
+

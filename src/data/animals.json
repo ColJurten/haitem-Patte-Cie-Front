@@ -1,0 +1,45 @@
+[
+  {
+    "id": 1,
+    "name": "Moka",
+    "species": "Chat",
+    "race": "Européen",
+    "sex": "F",
+    "dateOfBirth": "2019-05-12",
+    "weightKg": 4.2,
+    "color": "Marron / Blanc",
+    "sterilized": true,
+    "chipNumber": "250268500123456",
+    "photo": "/images/moka.jpg",
+    "ownerId": 1
+  },
+  {
+    "id": 2,
+    "name": "Rex",
+    "species": "Chien",
+    "race": "Border Collie",
+    "sex": "M",
+    "dateOfBirth": "2018-03-08",
+    "weightKg": 18.5,
+    "color": "Noir / Blanc",
+    "sterilized": false,
+    "chipNumber": "250268500987654",
+    "photo": "/images/rex.jpg",
+    "ownerId": 2
+  },
+  {
+    "id": 3,
+    "name": "Luna",
+    "species": "Lapin",
+    "race": "Nain bélier",
+    "sex": "F",
+    "dateOfBirth": "2021-09-20",
+    "weightKg": 1.6,
+    "color": "Blanc / Gris",
+    "sterilized": false,
+    "chipNumber": "250268501112233",
+    "photo": "/images/luna.jpg",
+    "ownerId": 3
+  }
+]
+
