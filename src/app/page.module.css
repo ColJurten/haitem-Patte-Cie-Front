@@ -1,141 +1,149 @@
-.page {
-  --background: #fafafa;
-  --foreground: #fff;
-
-  --text-primary: #000;
-  --text-secondary: #666;
-
-  --button-primary-hover: #383838;
-  --button-secondary-hover: #f2f2f2;
-  --button-secondary-border: #ebebeb;
-
-  display: flex;
-  min-height: 100vh;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-geist-sans);
-  background-color: var(--background);
+/* Conteneur général de la page d'accueil, à l'intérieur du LayoutShell */
+.home {
+    width: 100%;
+    max-width: 420px; /* largeur mobile centrée */
+    margin: 0 auto;
+    padding: 24px 16px 80px; /* 80px pour ne pas passer sous la BottomNav */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.main {
-  display: flex;
-  min-height: 100vh;
-  width: 100%;
-  max-width: 800px;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  background-color: var(--foreground);
-  padding: 120px 60px;
-}
-
-.intro {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-  gap: 24px;
-}
-
-.intro h1 {
-  max-width: 320px;
-  font-size: 40px;
-  font-weight: 600;
-  line-height: 48px;
-  letter-spacing: -2.4px;
-  text-wrap: balance;
-  color: var(--text-primary);
-}
-
-.intro p {
-  max-width: 440px;
-  font-size: 18px;
-  line-height: 32px;
-  text-wrap: balance;
-  color: var(--text-secondary);
-}
-
-.intro a {
-  font-weight: 500;
-  color: var(--text-primary);
-}
-
-.ctas {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  max-width: 440px;
-  gap: 16px;
-  font-size: 14px;
-}
-
-.ctas a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 40px;
-  padding: 0 16px;
-  border-radius: 128px;
-  border: 1px solid transparent;
-  transition: 0.2s;
-  cursor: pointer;
-  width: fit-content;
-  font-weight: 500;
-}
-
-a.primary {
-  background: var(--text-primary);
-  color: var(--background);
-  gap: 8px;
-}
-
-a.secondary {
-  border-color: var(--button-secondary-border);
-}
-
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  a.primary:hover {
-    background: var(--button-primary-hover);
-    border-color: transparent;
-  }
-
-  a.secondary:hover {
-    background: var(--button-secondary-hover);
-    border-color: transparent;
-  }
-}
-
-@media (max-width: 600px) {
-  .main {
-    padding: 48px 24px;
-  }
-
-  .intro {
+/* Carte hero violette type maquette Figma */
+.heroCard {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     gap: 16px;
-  }
-
-  .intro h1 {
-    font-size: 32px;
-    line-height: 40px;
-    letter-spacing: -1.92px;
-  }
+    padding: 24px 20px;
+    border-radius: 32px;
+    background: linear-gradient(145deg, #7c5cff, #9f8bff);
+    color: #ffffff;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.45);
+    overflow: hidden;
 }
 
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
-  }
+/* Colonne texte du hero */
+.heroText {
+    flex: 1;
+    z-index: 1;
+}
 
-  .page {
-    --background: #000;
-    --foreground: #000;
+.heroBadge {
+    margin: 0 0 8px;
+    font-size: 12px;
+    font-weight: 500;
+    opacity: 0.9;
+}
 
-    --text-primary: #ededed;
-    --text-secondary: #999;
+.heroTitle {
+    margin: 0 0 8px;
+    font-size: 20px;
+    line-height: 1.3;
+    font-weight: 700;
+}
 
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
-    --button-secondary-border: #1a1a1a;
-  }
+.heroSubtitle {
+    margin: 0 0 16px;
+    font-size: 13px;
+    line-height: 1.4;
+    opacity: 0.95;
+}
+
+/* Bouton principal "Voir mes animaux" */
+.heroButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    border-radius: 999px;
+    background: #ffffff;
+    color: #6b5bff;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.25);
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.heroButton:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 22px rgba(15, 23, 42, 0.3);
+}
+
+/* Colonne image (partie droite de la carte) */
+.heroImage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Cercle avec un emoji chien (remplaçable par une image) */
+.heroDogCircle {
+    width: 90px;
+    height: 120px;
+    border-radius: 32px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 42px;
+}
+
+/* Bloc texte en dessous du hero */
+.shortcut {
+    width: 100%;
+    max-width: 420px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 24px;
+    padding: 16px 18px 18px;
+    box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
+}
+
+.shortcutTitle {
+    margin: 0 0 6px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.shortcutText {
+    margin: 0 0 12px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #4b5563;
+}
+
+/* Bouton secondaire */
+.secondaryButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 14px;
+    border-radius: 999px;
+    border: 1px solid #e5e7eb;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #4b5563;
+    background: #ffffff;
+    transition: background 0.12s ease, border-color 0.12s ease;
+}
+
+.secondaryButton:hover {
+    background: #f3f4ff;
+    border-color: #c7d2fe;
+}
+
+/* Mobile first : si l'écran est très petit, on masque la colonne image */
+@media (max-width: 360px) {
+    .heroCard {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .heroImage {
+        align-self: center;
+    }
 }

@@ -1,111 +1,51 @@
-// src/app/page.jsx
-
 import Link from "next/link";
-
-// Import des données mockées JSON
-import animals from "@/data/animals.json";
-import owners from "@/data/owners.json";
-
-// Import des composants UI
 import LayoutShell from "@/components/LayoutShell/LayoutShell";
-import AnimalCard from "@/components/AnimalCard/AnimalCard";
+import styles from "./page.module.css";
 
-/**
- * Helper : retrouve le propriétaire d'un animal à partir de son ownerId.
- * On factorise cette logique ici pour ne pas polluer le JSX.
- */
-function getOwnerForAnimal(ownerId) {
-    return owners.find((owner) => owner.id === ownerId);
-}
-
-/**
- * Page Home
- * ---------
- * Affiche la liste des animaux de la clinique.
- * Chaque ligne est une AnimalCard cliquable, qui renvoie vers le carnet de santé
- * de l'animal : /carnet/[id]
- */
 export default function HomePage() {
     return (
         <LayoutShell>
-            {/* Header "Patte & Cie" */}
-            <header style={{ marginBottom: "16px" }}>
-                <h1
-                    style={{
-                        margin: 0,
-                        fontSize: "22px",
-                        fontWeight: 700,
-                        color: "#7e6bff",
-                    }}
-                >
-                    Patte &amp; Cie
-                </h1>
-                <p
-                    style={{
-                        margin: "4px 0 0",
-                        fontSize: "13px",
-                        color: "#6b7280",
-                    }}
-                >
-                    Carnets de santé des patients
-                </p>
-            </header>
+            <div className={styles.home}>
+                {/* Hero violet, inspiré de la maquette Figma */}
+                <section className={styles.heroCard}>
+                    <div className={styles.heroText}>
+                        <p className={styles.heroBadge}>healthypet</p>
 
-            {/* Card contenant la liste des animaux */}
-            <section
-                style={{
-                    background: "#ffffff",
-                    borderRadius: "24px",
-                    boxShadow: "0 12px 32px rgba(0, 0, 0, 0.08)",
-                    padding: "14px 16px",
-                }}
-            >
-                <h2
-                    style={{
-                        margin: "0 0 8px",
-                        fontSize: "15px",
-                        fontWeight: 600,
-                    }}
-                >
-                    Mes animaux
-                </h2>
+                        <h1 className={styles.heroTitle}>
+                            Helping you
+                            <br />
+                            to keep your bestie
+                            <br />
+                            stay healthy!
+                        </h1>
 
-                <ul
-                    style={{
-                        listStyle: "none",
-                        margin: 0,
-                        padding: 0,
-                    }}
-                >
-                    {animals.map((animal) => {
-                        const owner = getOwnerForAnimal(animal.ownerId);
+                        <p className={styles.heroSubtitle}>
+                            Consultez les carnets de santé de vos patients en quelques secondes, sans chercher les dossiers papier.
+                        </p>
 
-                        return (
-                            <li
-                                key={animal.id}
-                                style={{
-                                    borderTop: "1px solid #eef2ff",
-                                    paddingTop: "6px",
-                                    marginTop: "6px",
-                                }}
-                            >
-                                {/* Link Next vers la page de carnet de santé */}
-                                <Link
-                                    href={`/carnet/${animal.id}`}
-                                    style={{
-                                        textDecoration: "none",
-                                        color: "inherit",
-                                        display: "block",
-                                    }}
-                                >
-                                    {/* On délègue l'affichage à AnimalCard */}
-                                    <AnimalCard animal={animal} owner={owner} />
-                                </Link>
-                            </li>
-                        );
-                    })}
-                </ul>
-            </section>
+                        <Link href="/animaux" className={styles.heroButton}>
+                            Voir mes animaux
+                        </Link>
+                    </div>
+
+                    <div className={styles.heroImage}>
+                        <div className={styles.heroDogCircle}>🐶</div>
+                    </div>
+                </section>
+
+                {/* Petit bloc texte en dessous, pour remplir la home */}
+                <section className={styles.shortcut}>
+                    <h2 className={styles.shortcutTitle}>Accès rapide</h2>
+                    <p className={styles.shortcutText}>
+                        Depuis cette application, vous pouvez consulter un carnet de santé, vérifier les vaccins, voir les prochaines visites et retrouver les
+                        coordonnées des propriétaires.
+                    </p>
+
+                    <Link href="/animaux" className={styles.secondaryButton}>
+                        Ouvrir la liste des animaux
+                    </Link>
+                </section>
+            </div>
         </LayoutShell>
     );
 }

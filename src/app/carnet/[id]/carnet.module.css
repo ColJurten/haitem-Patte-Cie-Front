@@ -1,0 +1,275 @@
+/* src/app/carnet/[id]/carnet.module.css */
+
+/* [HF] Conteneur principal (mobile first) */
+.page {
+    max-width: 420px;
+    margin: 0 auto;
+    padding: 24px 16px 48px;
+    color: #26233a;
+}
+
+/* [HF] Message d’erreur si animal introuvable */
+.notFound {
+    margin-top: 80px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* ---------------------- */
+/* Header carnet de santé */
+/* ---------------------- */
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+/* petit bouton rond retour */
+.backButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 999px;
+    border: 1px solid rgba(60, 66, 87, 0.15);
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+    color: #4c4f6b;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.backButton:hover {
+    background: #ffffff;
+}
+
+/* bloc avatar + textes */
+.headerText {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* avatar rond avec initiale de l’animal */
+.avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 999px;
+    background: #5f6afc;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* titre "Carnet de santé" */
+.title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* nom de l’animal */
+.subtitle {
+    margin: 0;
+    font-size: 14px;
+    color: #6b6f86;
+}
+
+/* ------------- */
+/* Cartes / blocs */
+/* ------------- */
+
+.card {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 16px 18px 18px;
+    margin-bottom: 16px;
+    box-shadow: 0 12px 30px rgba(45, 38, 94, 0.08);
+}
+
+/* titre de section (h2) */
+.sectionTitle {
+    margin: 0 0 10px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #444059;
+}
+
+/* liste type <dl> stylée comme la maquette */
+.definitionList {
+    margin: 0;
+}
+
+/* une ligne "label / valeur" */
+.row {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 4px 0;
+    font-size: 13px;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.row:last-child {
+    border-bottom: none;
+}
+
+.row dt {
+    flex: 0 0 45%;
+    font-weight: 500;
+    color: #7a7f98;
+}
+
+.row dd {
+    flex: 1;
+    margin: 0;
+    text-align: right;
+    font-weight: 500;
+}
+
+/* texte pour "aucune donnée" */
+.empty {
+    margin: 4px 0 0;
+    font-size: 13px;
+    color: #7a7f98;
+}
+
+/* -------------- */
+/* Dernière visite */
+/* -------------- */
+
+.lastVisit {
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.lastVisit p {
+    margin: 3px 0;
+}
+
+.vet {
+    margin-top: 6px;
+}
+
+/* -------------- */
+/* Traitements    */
+/* -------------- */
+
+.treatmentList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.treatmentItem {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.treatmentItem:last-child {
+    border-bottom: none;
+}
+
+.treatmentName {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 600;
+    color: #46408a;
+}
+
+.treatmentDates {
+    margin: 2px 0;
+    font-size: 12px;
+    color: #7a7f98;
+}
+
+.treatmentReason,
+.treatmentComment {
+    margin: 2px 0;
+    font-size: 12px;
+}
+
+/* ---------------------- */
+/* Ajustement petit desktop */
+/* ---------------------- */
+
+@media (min-width: 768px) {
+    .page {
+        max-width: 420px;
+        margin: 40px auto 64px;
+    }
+}
+
+/* [HF] Header du carnet : gauche (retour + titre) et droite (photo) */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+/* Colonne gauche du header */
+.headerLeft {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Bouton retour minimaliste, rond */
+.backButton {
+    width: 32px;
+    height: 32px;
+    border-radius: 999px;
+    border: none;
+    background: rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.backButton:hover {
+    background: rgba(0, 0, 0, 0.12);
+    transform: translateX(-1px);
+}
+
+/* Colonne droite : avatar */
+.headerRight {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Avatar photo de l’animal */
+.avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 999px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+    border: 2px solid #ffffff;
+}
+
+/* Fallback si pas de photo : cercle avec initiale */
+.headerIcon {
+    width: 56px;
+    height: 56px;
+    border-radius: 999px;
+    background: #6c70f5;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 22px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+}

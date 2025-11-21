@@ -1,0 +1,36 @@
+.navbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 62px;
+    background: #ffffff;
+    border-top: 1px solid #e6e6e6;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 30;
+}
+
+.navItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    font-size: 22px;
+    color: #666;
+    transition: color 0.15s ease, transform 0.1s ease;
+}
+
+.icon:hover {
+    color: #6c70f5;
+    transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+    .navbar {
+        display: none;
+    }
+}
