@@ -5,6 +5,7 @@ import "./globals.css";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import BottomNav from "@/components/BottomNav/BottomNav";
+import TopNavBar from "@/components/NavBar/NavBar";
 
 // [HF] Fonts Next (déjà générées par create-next-app)
 const geistSans = Geist({
@@ -29,6 +30,7 @@ export default function RootLayout({ children }) {
             <body className={`${geistSans.variable} ${geistMono.variable}`}>
                 {/* Header global du site */}
                 <Header />
+                <TopNavBar />
 
                 {/* Contenu des pages */}
                 {children}

@@ -9,12 +9,18 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "next": "16.0.3",
+    "@hookform/resolvers": "^5.2.2",
+    "next": "16.0.10",
+    "petcare-lib": "git+https://github.com/2025-10-CDA-ECO-P6/petcare-lib.git",
     "react": "19.2.0",
     "react-dom": "19.2.0",
-    "react-icons": "^5.5.0"
+    "react-hook-form": "^7.68.0",
+    "react-icons": "^5.5.0",
+    "zod": "^4.2.1"
   },
   "devDependencies": {
+    "@types/node": "25.0.2",
+    "@types/react": "19.2.7",
     "eslint": "^9",
     "eslint-config-next": "16.0.3"
   }
