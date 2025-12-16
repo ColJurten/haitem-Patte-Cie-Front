@@ -1,0 +1,300 @@
+/* src/app/animal/[id]/animal.module.css */
+
+.page {
+    max-width: 420px;
+    margin: 0 auto;
+    padding: 24px 16px 80px;
+    color: #26233a;
+}
+
+/* Header with back button */
+.header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.backButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 999px;
+    border: 1px solid rgba(60, 66, 87, 0.15);
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+    color: #4c4f6b;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.backButton:hover {
+    background: #ffffff;
+    transform: translateX(-2px);
+}
+
+/* Animal profile card */
+.profileCard {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 20px;
+    margin-bottom: 16px;
+    box-shadow: 0 12px 30px rgba(45, 38, 94, 0.08);
+}
+
+.profileHeader {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #7e6bff 0%, #6c70f5 100%);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(108, 112, 245, 0.3);
+}
+
+.profileInfo {
+    flex: 1;
+}
+
+.animalName {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+    color: #26233a;
+}
+
+.animalMeta {
+    margin: 4px 0 0;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 12px;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 999px;
+}
+
+.badgePrimary {
+    background: linear-gradient(135deg, #6c70f5 0%, #5f6afc 100%);
+    color: #ffffff;
+}
+
+.badgeSecondary {
+    background: #e0e7ff;
+    color: #4338ca;
+}
+
+.badgeSuccess {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.description {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid #eef2ff;
+    font-size: 14px;
+    color: #4a5568;
+    line-height: 1.5;
+}
+
+.descriptionLabel {
+    font-weight: 600;
+    color: #26233a;
+}
+
+/* Section cards */
+.card {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 18px 20px;
+    margin-bottom: 16px;
+    box-shadow: 0 12px 30px rgba(45, 38, 94, 0.08);
+}
+
+.sectionTitle {
+    margin: 0 0 14px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #26233a;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Owner card */
+.ownerCard {
+    background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%);
+    border-radius: 16px;
+    padding: 16px;
+}
+
+.ownerName {
+    margin: 0 0 8px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #26233a;
+}
+
+.ownerDetail {
+    margin: 4px 0;
+    font-size: 14px;
+    color: #4c4f6b;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Visit history */
+.visitList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.visitItem {
+    background: #f8fafc;
+    border-radius: 16px;
+    padding: 14px 16px;
+    border-left: 4px solid #6c70f5;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.visitItem:hover {
+    transform: translateX(2px);
+    box-shadow: 0 4px 12px rgba(108, 112, 245, 0.15);
+}
+
+.visitDate {
+    margin: 0 0 4px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #6c70f5;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.visitReason {
+    margin: 0 0 6px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #26233a;
+}
+
+.visitVet {
+    margin: 0 0 8px;
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.visitDetails {
+    font-size: 13px;
+    color: #4a5568;
+}
+
+.visitDetails p {
+    margin: 4px 0;
+}
+
+.visitStatus {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    font-size: 11px;
+    font-weight: 500;
+    border-radius: 999px;
+    margin-top: 8px;
+}
+
+.statusScheduled {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.statusCompleted {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.emptyState {
+    text-align: center;
+    padding: 24px;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+/* Loading & Error states */
+.loadingState {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6b7280;
+    font-size: 15px;
+}
+
+.errorState {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 24px;
+}
+
+.errorText {
+    color: #ef4444;
+    font-size: 15px;
+    margin-bottom: 16px;
+}
+
+.linkButton {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 24px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #ffffff;
+    background: linear-gradient(135deg, #6c70f5 0%, #5f6afc 100%);
+    border-radius: 12px;
+    text-decoration: none;
+    transition: transform 0.1s ease, box-shadow 0.15s ease;
+}
+
+.linkButton:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(108, 112, 245, 0.35);
+}
+
+@media (min-width: 768px) {
+    .page {
+        max-width: 420px;
+        margin: 40px auto 64px;
+    }
+}
