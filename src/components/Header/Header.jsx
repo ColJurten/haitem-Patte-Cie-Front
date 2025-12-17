@@ -16,7 +16,6 @@ export default function Header() {
             <nav className={styles.nav}>
                 <Link href="/">Accueil</Link>
                 <Link href="/animaux">Animaux</Link>
-                <Link href="/visites">Visites</Link>
             </nav>
 
             <div className={styles.mobileMenu}>
