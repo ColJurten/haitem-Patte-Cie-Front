@@ -23,7 +23,8 @@ export default function DashboardPage() {
         api.setToken(token);
         
         const petModule = api.getModule("petModule");
-        const pets = await petModule.findAll();
+        const response = await petModule.findAll();
+        const pets = Array.isArray(response) ? response : (response?.data || response?.pets || []);
         setAnimals(pets);
       } catch (err) {
         console.error("Error fetching animals:", err);
