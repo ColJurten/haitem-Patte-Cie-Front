@@ -14,14 +14,6 @@ export default function BottomNav() {
             <Link href="/animaux" className={styles.navItem}>
                 <FaPaw className={styles.icon} />
             </Link>
-
-            <Link href="/visites" className={styles.navItem}>
-                <FaStethoscope className={styles.icon} />
-            </Link>
-
-            <Link href="/profil" className={styles.navItem}>
-                <FaUser className={styles.icon} />
-            </Link>
         </nav>
     );
 }
